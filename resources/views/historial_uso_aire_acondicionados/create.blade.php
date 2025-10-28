@@ -12,7 +12,7 @@
             <select name="aire_acondicionado_id" class="form-control" required>
                 <option value="">Seleccionar</option>
                 @foreach ($aires as $aire)
-                    <option value="{{ $aire->id }}">{{ $aire->ubicacion }}</option>
+                    <option value="{{ $aire->id }}">{{ $aire->marca }} ({{ $aire->modelo }})</option>
                 @endforeach
             </select>
         </div>

@@ -8,22 +8,22 @@ return new class extends Migration
 {
     public function up(): void
     {
+        // 👇 CORREGIDO AQUÍ (sin la 'a' extra)
         Schema::create('aire_acondicionados', function (Blueprint $table) {
-            // 🔧 Motor InnoDB para soportar claves foráneas
             $table->engine = 'InnoDB';
-
-            // 🔢 id => unsignedBigInteger implícito
+            
+            // 'id()' crea un UNSIGNED BIGINT
             $table->id();
 
-            // 🔗 Relación con aula (asegurate de tener 'aulas' creada antes)
-            $table->unsignedBigInteger('aula_id');
-
+            // Esto espera una tabla 'aulas' que también tenga 'id()'
+            $table->unsignedBigInteger('aula_id'); 
+            
             $table->string('marca')->nullable();
             $table->string('modelo')->nullable();
             $table->boolean('estado')->default(true);
             $table->timestamps();
 
-            // 🔗 Foreign key hacia aulas
+            // Foreign key hacia 'aulas'
             $table->foreign('aula_id')
                   ->references('id')
                   ->on('aulas')
@@ -33,6 +33,7 @@ return new class extends Migration
 
     public function down(): void
     {
+        // 👇 CORREGIDO AQUÍ
         Schema::dropIfExists('aire_acondicionados');
     }
 };

@@ -1,26 +1,25 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{
+    AulaController,
+    ReservaController,
+    DocenteController,
+    MateriaController,
+    DisponibilidadController,
+    HorarioController,
+    AireAcondicionadoController,
+    FocoController,
+    CortinaController,
+    MuebleController,
+    HistorialFocoController,
+    HistorialUsoAireAcondicionadoController
+};
 
-use App\Http\Controllers\AulaController;
-use App\Http\Controllers\ReservaController;
-use App\Http\Controllers\DocenteController;
-use App\Http\Controllers\MateriaController;
-use App\Http\Controllers\DisponibilidadController;
-use App\Http\Controllers\HorarioController;
-use App\Http\Controllers\AireAcondicionadoController;
-use App\Http\Controllers\FocoController;
-use App\Http\Controllers\CortinaController;
-use App\Http\Controllers\MuebleController;
-use App\Http\Controllers\HistorialFocoController;
-use App\Http\Controllers\HistorialUsoAireAcondicionadoController;
-
-// Página inicial personalizada
 Route::get('/', function () {
-    return view('home'); // nuestra vista principal
+    return view('home');
 });
 
-// Rutas RESTful para todos los controladores
 Route::resource('aulas', AulaController::class);
 Route::resource('reservas', ReservaController::class);
 Route::resource('docentes', DocenteController::class);
@@ -31,9 +30,11 @@ Route::resource('aireacondicionados', AireAcondicionadoController::class);
 Route::resource('focos', FocoController::class);
 Route::resource('cortinas', CortinaController::class);
 Route::resource('muebles', MuebleController::class);
-Route::resource('historialusoaireacondicionados', HistorialUsoAireAcondicionadoController::class);
+
+// 👇 Esta es la línea que necesitas, y ya la tienes
+Route::resource('historial_uso_aireacondicionados', HistorialUsoAireAcondicionadoController::class);
+
+// 👇 Esta también la tienes
 Route::resource('historialfocos', HistorialFocoController::class);
 
-Route::get('/pokemons', function () {
-    return view('pokemons');
-});
+Route::get('/pokemons', fn() => view('pokemons'));

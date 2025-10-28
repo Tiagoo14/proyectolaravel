@@ -191,7 +191,7 @@
       <div class="col-md-4"><a href="{{ route('cortinas.index') }}" class="menu-card"><i class="bi bi-window"></i>Cortinas</a></div>
       <div class="col-md-4"><a href="{{ route('muebles.index') }}" class="menu-card"><i class="bi bi-couch"></i>Muebles</a></div>
       <div class="col-md-4"><a href="{{ route('historialfocos.index') }}" class="menu-card"><i class="bi bi-archive"></i>Historial de Focos</a></div>
-      <div class="col-md-4"><a href="{{ route('historialusoaireacondicionados.index') }}" class="menu-card"><i class="bi bi-database"></i>Historial Uso Aires</a></div>
+      <div class="col-md-4"><a href="{{ route('historial_uso_aireacondicionados.index') }}" class="menu-card"><i class="bi bi-database"></i>Historial Uso Aires</a></div>
     </div>
   </div>
 

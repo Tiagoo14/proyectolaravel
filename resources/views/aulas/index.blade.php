@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Lista de Aulas</title>
+    <title>Aulas</title>
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
@@ -114,6 +115,7 @@
                     <th>Capacidad</th>
                     <th>Estado</th>
                     <th>Acciones</th>
+                    
                 </tr>
             </thead>
             <tbody>
