@@ -9,7 +9,7 @@ class CortinaSeeder extends Seeder
 {
     public function run()
     {
-        Cortina::create(['aula_id' => 1, 'estado' => 'Abiertaa']);
+        Cortina::create(['aula_id' => 1, 'estado' => 'Abierta']);
         Cortina::create(['aula_id' => 2, 'estado' => 'Cerrada']);
         Cortina::create(['aula_id' => 3, 'estado' => 'Abierta']);
     }
